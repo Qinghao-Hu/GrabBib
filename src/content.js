@@ -129,6 +129,9 @@ function usenixPro() {
             rawObj[key] = value
         }
     })
+    let bibkey = grabBibKey(rawObj['title'], rawObj['year'])
+    resArr[0] = `@inproceedings {${bibkey},`
+
     const usenixFlagMap = {
         'OSDI': 'OSDI',
         'NSDI': 'NSDI',
